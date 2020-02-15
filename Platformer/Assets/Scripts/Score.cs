@@ -15,7 +15,11 @@ public class Score : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        AddScore();
+        if (gameObject.tag == "Coin") return;
+        {
+            AddScore();
+        }
+        
     }
 
     void AddScore()
