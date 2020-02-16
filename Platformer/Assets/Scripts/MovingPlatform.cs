@@ -33,7 +33,10 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        other.transform.parent = this.transform;
+        if(other.tag == "Character")
+        {
+            other.transform.parent = this.transform;
+        }   
     }
 
     private void OnTriggerExit(Collider other)

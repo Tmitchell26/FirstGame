@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Coin : MonoBehaviour
 {
     public float spinSpeed = 100f;
-    
+    public int ScoreCount = 0;
+    public Text ScoreText;
 
     // Update is called once per frame
     void Update()
@@ -15,8 +17,18 @@ public class Coin : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(this.gameObject);
+        if(other.tag == "Character")
+        {
+            Destroy(this.gameObject);
+            AddScore();
+        }  
     }
 
-    
+    void AddScore()
+    {
+        int Score = ScoreCount++;
+        ScoreText.text = ScoreCount.ToString();
+    }
+
+
 }
