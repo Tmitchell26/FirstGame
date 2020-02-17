@@ -209,7 +209,7 @@ Transform:
   m_GameObject: {fileID: 41395897}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.09, y: 0.5, z: 32.05}
-  m_LocalScale: {x: 1.084, y: 1, z: 1}
+  m_LocalScale: {x: 1.3749455, y: 1, z: 1}
   m_Children:
   - {fileID: 518483812}
   - {fileID: 1169190127}
@@ -3177,7 +3177,7 @@ Transform:
   m_GameObject: {fileID: 826995332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.52, y: 0.5, z: 32.05}
-  m_LocalScale: {x: 1.1713, y: 1, z: 1}
+  m_LocalScale: {x: 1.474901, y: 1, z: 1}
   m_Children:
   - {fileID: 2070513461}
   - {fileID: 2084093199}
@@ -6453,6 +6453,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730679465}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1737171291 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7587767402427984125, guid: 8e5cbe948559980489c996a01b570dff,
+    type: 3}
+  m_PrefabInstance: {fileID: 7587767403221241772}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1737171298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737171291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cab95825101b7a4f8f8420c4ce7e882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScoreCount: 0
+  ScoreText: {fileID: 575026293}
 --- !u!1 &1775438654
 GameObject:
   m_ObjectHideFlags: 0

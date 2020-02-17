@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class Coin : MonoBehaviour
 {
     public float spinSpeed = 100f;
-    public int ScoreCount = 0;
-    public Text ScoreText;
+    //public int ScoreCount;
+    //public Text ScoreText;
 
     // Update is called once per frame
     void Update()
@@ -20,15 +20,15 @@ public class Coin : MonoBehaviour
         if(other.tag == "Character")
         {
             Destroy(this.gameObject);
-            AddScore();
+            //AddScore();
         }  
     }
 
-    void AddScore()
+    /*void AddScore()
     {
-        int Score = ScoreCount++;
+        ScoreCount++;
         ScoreText.text = ScoreCount.ToString();
-    }
+    }*/
 
 
 }
