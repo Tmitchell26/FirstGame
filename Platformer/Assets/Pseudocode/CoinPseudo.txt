@@ -1,0 +1,12 @@
+Coin Pseudocode
+
+1.Create global variables 
+	- spinSpeed = 100 (float)
+
+2. add to update method 
+	- rotate(0,0 time * spinSpeed)
+
+3. Create on trigger enter method 
+	- IF statement (tag == character)
+		- Destroy game object 
+	END if

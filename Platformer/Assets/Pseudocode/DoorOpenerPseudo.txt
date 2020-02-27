@@ -1,0 +1,30 @@
+Door opener pseudocode
+
+1. Create global variables 
+	- closedPosition (vector3) := vector3(position)
+	- openedPosition (vector3) := vector3(position)
+	- openSpeed (float) = 5
+	- open (boolean) = false 
+
+2. add to update method 
+	- IF statement (open)
+		- door position = opened position * openSpeed
+	- else 
+		- door position = closedposition * openSpeed
+	END IF
+
+3. Create on trigger enter method 
+	- IF statement (tag == character)
+		- open door
+	END IF 
+
+4. Create on trigger exit method 
+	- IF statment (tag == character)
+		- close door
+
+5. Create close door method 
+	- open = false
+
+6. Create open door method 
+	- open = true 
+

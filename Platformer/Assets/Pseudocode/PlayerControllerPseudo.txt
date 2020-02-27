@@ -1,0 +1,23 @@
+Player Controller Pseudocode 
+
+1. Create global variables 
+	- moveSpeed = 5 (float)
+	- turnSpeed = 60 (float)
+	- jumpHeight = 5 (float)
+
+2. add to update method 
+	- IF statement (input key up arrow)
+		- positon += forward * movespeed
+	END if 
+	-IF statement (input key down arrow)
+		- position -= forward *moveSpeed
+	END if 
+	-IF statement (input key left arrow)
+		- rotate (transform up * -turnSpeed)
+	END if 
+	-IF statement (input key right arrow)
+		- rotate (transform up * turnSpeed)
+	END if 
+	-IF statement (input key space && math(get component<rigidbody>))
+		- get component rigidbody velocity += vector up * jumpHeight
+	END if 

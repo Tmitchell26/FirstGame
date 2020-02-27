@@ -1,0 +1,15 @@
+Score Pseudocode
+
+1. Create globla variables 
+	- ScoreCount (int)
+	- ScoreText (Text)
+
+2. Create on trigger enter method 
+	- IF statement (tag == coin)
+		- AddScore method call 
+	END if 
+
+3. Create AddScore method 
+	ScoreCount +1
+	ScoreText = ScoreCount to string
+

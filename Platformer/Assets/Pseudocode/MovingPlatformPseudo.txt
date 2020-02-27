@@ -1,0 +1,33 @@
+Moving Platform Pseudocode
+
+1. Create global variables 
+	- Axis {x-axis,y-axis,z-axis} (enum)
+	- axis (Axis)
+	- moveDistance (float)
+	- moveSpeed (float)
+
+2. add to update method 
+	- Vector moveDirection = Vector zero
+	-Switch statement 
+		-case (x-axis)
+			moveDirection = transform right 
+
+		-case (y-axis)
+			moveDirction = transform up 
+
+		-case (z-axis)
+			moveDirection = transform forward 
+
+	END switch 
+	transform position += moveDirection * moveDistance * Math(moveSpeed)
+
+3. Create on trigger enter method 
+	- IF statment (tag == character)
+		- transform parent = this transform 
+	END if
+
+4. Create on trigger exit method 
+	- trigger parent = null 
+
+
+
