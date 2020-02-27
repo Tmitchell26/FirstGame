@@ -16,6 +16,7 @@ public class Coin : MonoBehaviour
     {
         if(other.tag == "Character")
         {
+            other.GetComponent<PlayerController>().GainXP(1);
             Destroy(this.gameObject);
             
         }  
