@@ -35,6 +35,11 @@ public class Score : MonoBehaviour
         {
             AddScore();
         }
+        if (other.tag == "BigCoin")
+        {
+            AddScore();
+        }
+
     }
 
     void AddScore()

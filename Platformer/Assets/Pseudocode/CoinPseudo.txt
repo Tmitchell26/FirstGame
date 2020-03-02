@@ -8,5 +8,6 @@ Coin Pseudocode
 
 3. Create on trigger enter method 
 	- IF statement (tag == character)
+		- get component from player controller: GainXP(1)
 		- Destroy game object 
 	END if

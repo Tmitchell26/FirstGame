@@ -1,23 +1,84 @@
 Player Controller Pseudocode 
 
 1. Create global variables 
+	// base movement stats 
 	- moveSpeed = 5 (float)
 	- turnSpeed = 60 (float)
 	- jumpHeight = 5 (float)
 
-2. add to update method 
-	- IF statement (input key up arrow)
+	// movement stats with level buffs
+	- currentMoveSpeed (float)
+	- currentTurnSpeed (float)
+	- currentJumpHeight (float)
+
+	// XP and level stats
+	- xp = 0 (float)
+	- xpForNextLevel = 10 (float)
+	- level = 0 (integer)
+
+2. add to the start method
+	// simple method calls 
+	- SetXpForNextLevel <- none
+	- SetCurrentMoveSpeed <- none 
+	- SetCurrentTurnSpeed <- none 
+	- SetCurrentJumpHeight <- none 
+
+3. set up methods that are called in start method 
+	- SetXpForNextLevel <- none
+		- xpForNextLevel = (10 * level * level * 0.1)
+		- console output : xpForNextLevel 
+
+	- SetCurrentMoveSpeed <- none
+		-currentMoveSpeed = moveSpeed + (moveSpeed * 0.1 * level)
+		-  console output : currentMoveSpeed
+
+	- SetCurrentTurnSpeed <- none 
+		- currentTurnSpeed = turnSpeed + (turnSpeed * 0.1 * level)
+		- console output : currentTurnSpeed
+
+	- SetCurrentJumpHeight <- none 
+		- currentJumpHeight = jumpHeight + (jumpHeight * 0.1 * level)
+		- console output : currentJumpHeight
+
+4. Create LevelUp method <- none
+	- xp = 0
+	- level + 1
+	- console output : level
+	- SetXpForNextLevel <- none 
+	- SetCurrentMoveSpeed <- none
+	- SetCurrentTurnSpeed <- none 
+	- SetCurrentJumpHeight <- none
+
+5. Create a GainXP method <- xpToGain (integer)
+	- xp += xpToGain
+	-console output : xpToGain, xp, xpForNextLevel
+
+
+6. add to update method
+	-IF statement (input key x)
+		-GainXp <- 1
+	END if 
+
+	-IF statment (xp > xpForNextLevel)
+		- LevelUp <- none
+	END if
+
+	-IF statement (input key up arrow)
 		- positon += forward * movespeed
 	END if 
+
 	-IF statement (input key down arrow)
 		- position -= forward *moveSpeed
 	END if 
+
 	-IF statement (input key left arrow)
 		- rotate (transform up * -turnSpeed)
 	END if 
+
 	-IF statement (input key right arrow)
 		- rotate (transform up * turnSpeed)
 	END if 
+
 	-IF statement (input key space && math(get component<rigidbody>))
 		- get component rigidbody velocity += vector up * jumpHeight
 	END if 

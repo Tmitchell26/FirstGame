@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     public float currentJumpHeight;
 
     public float xp = 0; // amount of XP the player has 
-    public float xpForNextLevel = 10; //xp needed to level up, the higher the level, the harder it gets
+    public float xpForNextLevel = 5; //xp needed to level up, the higher the level, the harder it gets
     public int level = 0; //level of the player
 
     // Start is called before the first frame update
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
 
     void SetXpForNextLevel()
     {
-        xpForNextLevel = (10f + (level * level * 0.1f));
+        xpForNextLevel = (5f + (level * level * 0.1f));
         Debug.Log("xpForNextLevel " + xpForNextLevel);
     }
 
@@ -82,8 +82,10 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //Test the GainXp function by pressing the x button. 
-        if (Input.GetKeyDown(KeyCode.X) == true) { GainXP(1); }
-
+        if (Input.GetKeyDown(KeyCode.X) == true)
+        {
+            GainXP(1);
+        }
 
         //LevelUp when the appropriate conditions are met.
         if (xp >= xpForNextLevel)
